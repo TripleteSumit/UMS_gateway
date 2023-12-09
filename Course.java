@@ -38,9 +38,6 @@ public class Course extends CourseProfile {
 
     public void studentEnrollment(Student st, CourseAdmin ca) throws StudentAlreadyEnrolledException {
         if (ca.isStudentEnrolled(st)) {
-            // System.out.println("Student is already enrolled in " +
-            // ca.getEnrolledStudentCourseName(st));
-            // return;
             throw new StudentAlreadyEnrolledException(
                     "Student is already enrolled in " + ca.getEnrolledStudentCourseName(st));
         }
